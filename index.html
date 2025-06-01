@@ -4,24 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vietnam Countdown</title>
+    <title>Südafrika Countdown</title>
     <link rel="stylesheet" href="./static/styles.css" />
 </head>
 
 <body>
     <div class="background--image">
         <div class="content__middle--center content-box">
-            <h1>VIỆT NAM 2025</h1>
+            <h1>Südafrika 2025</h1>
             <hr class="horizontal-rule">
             <p id="counter"></p>
         </div>
         <div class="content__bottom content__bottom--left">
             <p>
-                <a class="hyperlink" href="https://www.pmo-software.de/imprint">Impressum</a>
+                <a class="hyperlink" href="https://www.pmo-software.de/imprint" target="_blank">Impressum</a>
             </p>
         </div>
     </div>
 
-    <script src="./static/script.js"></script>
+    <script src="./static/countdown.js"></script>
+    <script>
+        const targetDate = new Date('2025-10-09T21:45:00');
+        new Countdown(targetDate);
+    </script>
 </body>
 </html>
