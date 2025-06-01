@@ -29,6 +29,12 @@ html {
   padding: 15px 40px 15px 40px;
 }
 
+@media (max-width: 600px) {
+  .content__middle--center {
+    top: 25%;
+  }
+}
+
 .content__bottom {
   position: absolute;
   bottom: 0;
