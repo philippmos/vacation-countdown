@@ -30,7 +30,7 @@ class Countdown {
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        this.counter.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        this.counter.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
     public start(): void {

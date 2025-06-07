@@ -24,7 +24,7 @@ var Countdown = /** @class */ (function () {
         var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        this.counter.innerHTML = "".concat(days, "d ").concat(hours, "h ").concat(minutes, "m ").concat(seconds, "s");
+        this.counter.textContent = "".concat(days, "d ").concat(hours, "h ").concat(minutes, "m ").concat(seconds, "s");
     };
     Countdown.prototype.start = function () {
         var _this = this;
