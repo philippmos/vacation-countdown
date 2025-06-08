@@ -19,6 +19,7 @@ permissions:
 jobs:
 
   build:
+    name: Build the WebApp
     runs-on: ubuntu-latest
 
     steps:
@@ -38,15 +39,22 @@ jobs:
       - name: 🛠️ Build the project
         run: npm run build:complete
 
+      - name: 📤 Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: ${{ env.APP_ARTIFACT_LOCATION }}
+
 
 
   build_and_deploy_job:
+    name: Deploy the WebApp
+
     permissions:
       contents: read
       pull-requests: write
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
     needs: build
     steps:
       - uses: actions/checkout@v4
@@ -62,6 +70,7 @@ jobs:
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
           app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
+
 
   close_pull_request_job:
     permissions:
