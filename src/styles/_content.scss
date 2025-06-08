@@ -1,0 +1,31 @@
+.content {
+  &__middle--center {
+    color: #F4E4C1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+
+    &--left {
+      left: 16px;
+    }
+  }
+
+  &-box {
+    background-color: #8B4513;
+    padding: 15px 40px 15px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content__middle--center {
+    top: 25%;
+  }
+}

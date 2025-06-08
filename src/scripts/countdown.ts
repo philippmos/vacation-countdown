@@ -38,3 +38,5 @@ class Countdown {
         this.intervalId = window.setInterval(() => this.updateCountdown(), 1000);
     }
 }
+
+export default Countdown;

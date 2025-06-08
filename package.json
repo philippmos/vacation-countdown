@@ -1,0 +1,31 @@
+{
+  "name": "vacation-countdown",
+  "version": "1.0.0",
+  "description": "`tsc .\\src\\countdown.ts --outDir static`",
+  "main": "index.js",
+  "scripts": {
+    "build:install": "npx --yes bun install",
+    "build:ts": "bun build ./src/main.ts --outdir ./dist",
+    "build:scss": "bunx sass ./src:./dist --no-source-map",
+    "build:prod": "bun --env-file=.env.production ./bun-config/bun.config.build.ts",
+    "build:dev": "bun --env-file=.env.development ./bun-config/bun.config.build.ts",
+    "build:complete": "npm run build:install && npm run build:prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philippmos/VacationCountdown.git"
+  },
+  "author": "philipp-mos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philippmos/VacationCountdown/issues"
+  },
+  "homepage": "https://github.com/philippmos/VacationCountdown#readme",
+  "devDependencies": {
+    "@types/bun": "1.2.15",
+    "@types/node": "22.15.30",
+    "sass": "1.89.1",
+    "typescript": "5.8.3"
+  }
+}

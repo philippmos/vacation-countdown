@@ -1,2 +1,2 @@
-# Build the Script
-`tsc .\src\countdown.ts --outDir static`
+# Build the project
+`npm run build:complete`
