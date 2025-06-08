@@ -18,7 +18,7 @@ class Countdown {
         const timeRemaining = this.targetDate.getTime() - now.getTime();
 
         if (timeRemaining <= 0) {
-            this.counter.innerHTML = "Countdown finished!";
+            this.counter.textContent = "Zeit abgelaufen! Urlaub hat begonnen!";
             if (this.intervalId !== undefined) {
                 clearInterval(this.intervalId);
             }

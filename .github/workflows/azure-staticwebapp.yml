@@ -63,7 +63,7 @@ jobs:
           name: build
           path: ${{ env.APP_ARTIFACT_LOCATION }}
 
-      - name: Deploy
+      - name: 🚀 Deploy
         id: deploy
 
         uses: Azure/static-web-apps-deploy@v1

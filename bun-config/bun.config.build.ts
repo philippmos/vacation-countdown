@@ -18,14 +18,6 @@ await Bun.build({
     plugins: [styleScss]
 });
 
-await copyFiles(
-    [
-        './src/assets/favicon.ico'
-    ],
-    './dist/static');
+await copyFiles(['./src/assets/favicon.ico'], './dist/static');
 
-await copyFiles(
-    [
-        './index.html'
-    ],
-    './dist');
+await copyFiles(['./index.html'], './dist');
