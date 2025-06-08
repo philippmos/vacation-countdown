@@ -20,7 +20,18 @@
 
   &-box {
     background-color: #8B4513;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: pulse-shadow 2s infinite alternate;
     padding: 15px 40px 15px 40px;
+    
+    @keyframes pulse-shadow {
+      from {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      to {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+      }
+    }
   }
 }
 
