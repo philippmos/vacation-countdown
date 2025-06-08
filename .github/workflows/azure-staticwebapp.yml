@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: 22.15.0
           cache: 'npm'
+          cache-dependency-path: bun.lock
+
 
       - name: 🛠️ Build the project
         run: npm run build:complete
