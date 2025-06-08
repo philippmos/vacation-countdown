@@ -69,7 +69,7 @@ jobs:
           action: "upload"
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
-          app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
+          app_artifact_location: ./
 
 
   close_pull_request_job:
