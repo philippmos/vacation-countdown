@@ -3,7 +3,7 @@ import { styleScss } from './bun.plugins';
 
 await Bun.build({
     entrypoints: ['./src/main.ts'],
-    outdir: './dist',
+    outdir: './dist/static',
     naming: 'index.[ext]',
     target: 'node',
     minify: isProduction
@@ -11,7 +11,7 @@ await Bun.build({
 
 await Bun.build({
     entrypoints: ['./src/main.scss'],
-    outdir: './dist',
+    outdir: './dist/static',
     naming: '[name].css',
     minify: isProduction,
     loader: { '.scss': 'css' },
@@ -21,5 +21,11 @@ await Bun.build({
 await copyFiles(
     [
         './src/assets/favicon.ico'
+    ],
+    './dist/static');
+
+await copyFiles(
+    [
+        './index.html'
     ],
     './dist');
