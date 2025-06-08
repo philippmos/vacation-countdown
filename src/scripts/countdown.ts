@@ -1,12 +1,18 @@
+import ThemeProvider from "./theme-provider";
+
 class Countdown {
     private intervalId: number | undefined;
     private counter: HTMLElement | null;
 
-    constructor(private targetDate: Date, counterId: string = 'counter') {
+    constructor(
+        private themeProvider: ThemeProvider,
+        counterId: string = 'counter') {
         this.counter = document.getElementById(counterId);
-        if (this.counter) {
-            this.start();
-        }
+    }
+
+    public start(): void {
+        this.updateCountdown();
+        this.intervalId = window.setInterval(() => this.updateCountdown(), 1000);
     }
 
     private updateCountdown(): void {
@@ -15,10 +21,10 @@ class Countdown {
         }
 
         const now = new Date();
-        const timeRemaining = this.targetDate.getTime() - now.getTime();
+        const timeRemaining = this.themeProvider.getTargetDate().getTime() - now.getTime();
 
         if (timeRemaining <= 0) {
-            this.counter.textContent = "Zeit abgelaufen! Urlaub hat begonnen!";
+            this.updateCountdownElement('Zeit abgelaufen! Urlaub hat begonnen!');
             if (this.intervalId !== undefined) {
                 clearInterval(this.intervalId);
             }
@@ -30,12 +36,17 @@ class Countdown {
         const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        this.counter.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        const remainingTimeString = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        this.themeProvider.updatePageTitle(remainingTimeString);
+        this.updateCountdownElement(remainingTimeString);
     }
 
-    public start(): void {
-        this.updateCountdown();
-        this.intervalId = window.setInterval(() => this.updateCountdown(), 1000);
+    private updateCountdownElement(value: string): void {
+        if (!this.counter) {
+            return;
+        }
+
+        this.counter.textContent = value; 
     }
 }
 

@@ -20,4 +20,4 @@ await Bun.build({
 
 await copyFiles(['./src/assets/favicon.ico'], './dist/static');
 
-await copyFiles(['./index.html'], './dist');
+await copyFiles(['./src/index.html'], './dist');
