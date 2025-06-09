@@ -10,7 +10,8 @@
 
     "build:prod:default": "cross-env ACTIVE_THEME=default npm run build:prod",
     "build:prod:vietnam": "cross-env ACTIVE_THEME=vietnam npm run build:prod",
-    "build:prod:southafrica": "cross-env ACTIVE_THEME=southafrica npm run build:prod"
+    "build:prod:southafrica": "cross-env ACTIVE_THEME=southafrica npm run build:prod",
+    "build:prod:retirement": "cross-env ACTIVE_THEME=retirement npm run build:prod"
   },
   "repository": {
     "type": "git",

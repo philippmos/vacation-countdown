@@ -1,0 +1,11 @@
+@use './open-sans';
+
+:root [data-theme="retirement"] {
+  --content-box-text-color: #4c4c4d;
+  --content-box-bg-color: #C7D9CB;
+
+  --background-image: url('../assets/background-retirement.png');
+
+  --default-text-color: #4c4c4d;
+  --default-text-font: "Open Sans", "Courier New", Courier, monospace;
+}
