@@ -1,9 +1,10 @@
-import Countdown from './scripts/countdown';
-import ThemeProvider from './scripts/theme-provider';
+import Countdown from './modules/countdown';
+import ThemeProvider from './providers/theme-provider';
 
 
 const initApp = (): void => {
     const themeProvider = new ThemeProvider(
+        'southafrica',
         'Südafrika',
         new Date('2025-10-09T21:45:00'));
 

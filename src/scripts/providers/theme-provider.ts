@@ -1,13 +1,15 @@
-import ElementHelper from "./element-helper";
+import ElementHelper from "../helpers/element-helper";
 
 class ThemeProvider {
     constructor(
+        private themeKey: string,
         private themeName: string,
         private targetDate: Date) { }
 
     public applyTheme(): void {
+        this.configureStyleTheme();
         this.updateVacationName();
-        // this.updateVacationTargetDate();
+        this.updateVacationTargetDate();
     }
 
     public getThemeName(): string {
@@ -20,6 +22,16 @@ class ThemeProvider {
 
     public updatePageTitle(remainingTimeString: string): void {
         document.title = `${remainingTimeString} - ${this.getThemeName()}`;
+    }
+
+    private configureStyleTheme(): void {
+        const themeSelector = document.getElementById('main-area');
+
+        if (!themeSelector) {
+            return;
+        }
+
+        themeSelector.setAttribute('data-theme', this.themeKey);
     }
 
     private updateVacationName(): void {

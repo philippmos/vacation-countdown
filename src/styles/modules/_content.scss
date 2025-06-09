@@ -1,0 +1,42 @@
+@use "../utilities/helpers";
+
+.content {
+  &__middle--center {
+    color: var(--content-box-text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    @media (max-width: 600px) {
+      top: 25%;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    font-size: helpers.px2rem(15px);
+
+    &--left {
+      left: helpers.px2rem(16px);
+    }
+  }
+
+  &-box {
+    background-color: var(--content-box-bg-color);
+    box-shadow: 0 0 helpers.px2rem(10px) rgba(0, 0, 0, 0.5);
+    animation: pulse-shadow 2s infinite alternate;
+    padding: helpers.px2rem(15px) helpers.px2rem(40px) helpers.px2rem(15px) helpers.px2rem(40px);
+    
+    @keyframes pulse-shadow {
+      from {
+      box-shadow: 0 0 helpers.px2rem(10px) rgba(0, 0, 0, 0.5);
+      }
+      to {
+      box-shadow: 0 0 helpers.px2rem(30px) rgba(0, 0, 0, 1);
+      }
+    }
+  }
+}

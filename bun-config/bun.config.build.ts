@@ -2,7 +2,7 @@ import { copyFiles, isProduction } from './bun.config';
 import { styleScss } from './bun.plugins';
 
 await Bun.build({
-    entrypoints: ['./src/main.ts'],
+    entrypoints: ['./src/scripts/main.ts'],
     outdir: './dist/static',
     naming: 'index.[ext]',
     target: 'node',
@@ -10,7 +10,7 @@ await Bun.build({
 });
 
 await Bun.build({
-    entrypoints: ['./src/main.scss'],
+    entrypoints: ['./src/styles/main.scss'],
     outdir: './dist/static',
     naming: '[name].css',
     minify: isProduction,

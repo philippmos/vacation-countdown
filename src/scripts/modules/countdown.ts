@@ -1,4 +1,4 @@
-import ThemeProvider from "./theme-provider";
+import ThemeProvider from "../providers/theme-provider";
 
 class Countdown {
     private intervalId: number | undefined;

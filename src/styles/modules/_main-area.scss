@@ -1,0 +1,8 @@
+@use "../utilities/helpers";
+
+.main-area {
+  color: var(--default-text-color);
+  font-family: var(--default-text-font);
+  font-weight: bold;
+  font-size: helpers.px2rem(25px);
+}

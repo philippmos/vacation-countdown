@@ -1,0 +1,9 @@
+@use '../../fonts/edu-nsw-act';
+
+:root [data-theme="southafrica"] {
+  --content-box-text-color: #F4E4C1;
+  --content-box-bg-color: #8B4513;
+
+  --default-text-color: #ffffff;
+  --default-text-font: "Edu NSW ACT Hand Pre", "Courier New", Courier, monospace;
+}
