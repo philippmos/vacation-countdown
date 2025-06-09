@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build:install": "npx --yes bun install",
-    "build:ts": "bun build ./src/main.ts --outdir ./dist",
-    "build:scss": "bunx sass ./src:./dist --no-source-map",
     "build:prod": "bun --env-file=.env.production ./bun-config/bun.config.build.ts",
     "build:dev": "bun --env-file=.env.development ./bun-config/bun.config.build.ts",
-    "build:complete": "npm run build:install && npm run build:prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "build:prod:default": "cross-env ACTIVE_THEME=default npm run build:prod",
+    "build:prod:vietnam": "cross-env ACTIVE_THEME=vietnam npm run build:prod",
+    "build:prod:southafrica": "cross-env ACTIVE_THEME=southafrica npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/bun": "1.2.15",
     "@types/node": "22.15.30",
+    "cross-env": "7.0.3",
     "sass": "1.89.1",
     "typescript": "5.8.3"
   }

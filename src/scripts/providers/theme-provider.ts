@@ -1,10 +1,9 @@
 import ElementHelper from "../helpers/element-helper";
+import { Theme } from "../models/theme";
 
 class ThemeProvider {
     constructor(
-        private themeKey: string,
-        private themeName: string,
-        private targetDate: Date) { }
+        private readonly theme: Theme) { }
 
     public applyTheme(): void {
         this.configureStyleTheme();
@@ -13,11 +12,11 @@ class ThemeProvider {
     }
 
     public getThemeName(): string {
-        return this.themeName;
+        return this.theme.name;
     }
 
     public getTargetDate(): Date {
-        return this.targetDate;
+        return this.theme.targetDate;
     }
 
     public updatePageTitle(remainingTimeString: string): void {
@@ -31,19 +30,19 @@ class ThemeProvider {
             return;
         }
 
-        themeSelector.setAttribute('data-theme', this.themeKey);
+        themeSelector.setAttribute('data-theme', this.theme.themeKey);
     }
 
     private updateVacationName(): void {
         ElementHelper.updateTextContentById(
             'vacation-name',
-            this.themeName);
+            this.theme.name);
     }
 
     private updateVacationTargetDate(): void {
         ElementHelper.updateTextContentById(
             'vacation-target-year',
-            this.targetDate.getFullYear().toString());
+            this.theme.targetDate.getFullYear().toString());
     }
 }
 

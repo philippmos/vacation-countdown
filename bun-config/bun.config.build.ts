@@ -6,7 +6,8 @@ await Bun.build({
     outdir: './dist/static',
     naming: 'index.[ext]',
     target: 'node',
-    minify: isProduction
+    minify: isProduction,
+    env: 'inline'
 });
 
 await Bun.build({
