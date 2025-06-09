@@ -1,7 +1,7 @@
 {
   "name": "vacation-countdown",
   "version": "1.0.0",
-  "description": "`tsc .\\src\\countdown.ts --outDir static`",
+  "description": "Simple themeable WebApp to build awesome vacation countdowns",
   "main": "index.js",
   "scripts": {
     "build:install": "npx --yes bun install",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philippmos/VacationCountdown.git"
+    "url": "git+https://github.com/philippmos/vacation-countdown.git"
   },
   "author": "philipp-mos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/philippmos/VacationCountdown/issues"
+    "url": "https://github.com/philippmos/vacation-countdown/issues"
   },
-  "homepage": "https://github.com/philippmos/VacationCountdown#readme",
+  "homepage": "https://github.com/philippmos/vacation-countdown#readme",
   "devDependencies": {
     "@types/bun": "1.2.15",
     "@types/node": "22.15.30",
