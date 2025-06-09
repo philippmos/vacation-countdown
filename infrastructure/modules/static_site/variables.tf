@@ -1,4 +1,4 @@
-variable "static_site_name" {
+variable "name" {
     description = "Name of the static site"
     type        = string
 }
