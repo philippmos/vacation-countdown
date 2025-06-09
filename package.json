@@ -6,7 +6,7 @@
   "scripts": {
     "build:install": "npx --yes bun install",
     "build:prod": "cross-env NODE_ENV=production bun ./bun-config/bun.config.build.ts",
-    "build:dev": "cross-env NODE_ENV=development bun ./bun-config/bun.config.build.ts",
+    "build:dev": "cross-env NODE_ENV=development ACTIVE_THEME=default bun ./bun-config/bun.config.build.ts",
 
     "build:prod:default": "cross-env ACTIVE_THEME=default npm run build:prod",
     "build:prod:vietnam": "cross-env ACTIVE_THEME=vietnam npm run build:prod",
