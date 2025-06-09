@@ -4,16 +4,16 @@ module "resource_group" {
   location            = var.location
 }
 
-module "vacation_static_site" {
+module "southafrica_static_site" {
   source                  = "./modules/static_site"
-  static_site_name        = "vacation-countdown"
+  static_site_name        = "web-southafrica-countdown"
   resource_group_name     = module.resource_group.name
   resource_group_location = module.resource_group.location
 }
 
 module "retirement_static_site" {
   source                  = "./modules/static_site"
-  static_site_name        = "retirement-countdown"
+  static_site_name        = "web-retirement-countdown"
   resource_group_name     = module.resource_group.name
   resource_group_location = module.resource_group.location
 }
