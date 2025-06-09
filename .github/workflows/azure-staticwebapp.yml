@@ -45,6 +45,7 @@ jobs:
 
   build_and_deploy_job:
     name: Deploy the WebApp
+    if: github.ref_name == 'southafrica' || github.ref_name == 'retirement'
 
     permissions:
       contents: read
