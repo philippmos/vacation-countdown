@@ -2,7 +2,7 @@
 @use "../animations/spin";
 
 .page-loader {
-    background: #fff;
+    background-color: var(--color-primary);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -14,7 +14,8 @@
     }
 
     &__icon {
-        background-image: url('../assets/circle-loader.svg');
+        color: var(--color-secondary);
+
         height: helpers.px2rem(50px);
         left: 50%;
         margin: helpers.px2rem(-20px) 0 0 helpers.px2rem(-20px);
@@ -23,5 +24,13 @@
         top: 50%;
         width: helpers.px2rem(50px);
         animation: spin 1.5s linear infinite;
+
+        &--colored {
+            fill: white !important;
+        }
+
+        svg {
+            fill: currentColor;
+        }
     }
 }

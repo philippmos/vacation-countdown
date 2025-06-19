@@ -1,8 +1,11 @@
 @use './edu-nsw-act';
 
 :root [data-theme="southafrica"] {
-  --content-box-text-color: #F4E4C1;
-  --content-box-bg-color: #8B4513;
+  --color-primary: #8B4513;
+  --color-secondary: #F4E4C1;
+
+  --content-box-text-color: var(--color-secondary);
+  --content-box-bg-color: var(--color-primary);
 
   --background-image: url('../assets/background-southafrica.png');
 

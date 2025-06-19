@@ -1,9 +1,12 @@
 :root [data-theme="vietnam"] {
-  --content-box-text-color: #bdc3c7;
-  --content-box-bg-color: #006600;
+  --color-primary: #006600;
+  --color-secondary: #bdc3c7;
+
+  --content-box-text-color: var(--color-secondary);
+  --content-box-bg-color: var(--color-primary);
 
   --background-image: url('../assets/background-vietnam.png');
 
-  --default-text-color: #bdc3c7;
+  --default-text-color: var(--color-secondary);
   --default-text-font: "Courier New", Courier, monospace;
 }
