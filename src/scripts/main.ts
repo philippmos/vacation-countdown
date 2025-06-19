@@ -1,5 +1,6 @@
 import Countdown from './modules/countdown';
 import ThemeProvider from './providers/theme-provider';
+import PageLoader from './modules/page-loader';
 
 class Startup {
     public initApp = (): void => {
@@ -8,6 +9,8 @@ class Startup {
 
         themeProvider.applyTheme();
         countdown.start();
+
+        new PageLoader();
     }
 }
 

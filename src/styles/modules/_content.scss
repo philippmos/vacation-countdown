@@ -1,4 +1,5 @@
 @use "../utilities/helpers";
+@use "../animations/pulse-shadow";
 
 .content {
   &__middle--center {
@@ -29,14 +30,5 @@
     box-shadow: 0 0 helpers.px2rem(10px) rgba(0, 0, 0, 0.5);
     animation: pulse-shadow 2s infinite alternate;
     padding: helpers.px2rem(15px) helpers.px2rem(40px) helpers.px2rem(15px) helpers.px2rem(40px);
-    
-    @keyframes pulse-shadow {
-      from {
-      box-shadow: 0 0 helpers.px2rem(10px) rgba(0, 0, 0, 0.5);
-      }
-      to {
-      box-shadow: 0 0 helpers.px2rem(30px) rgba(0, 0, 0, 1);
-      }
-    }
   }
 }

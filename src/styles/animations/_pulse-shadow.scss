@@ -1,0 +1,11 @@
+@use "../utilities/helpers";
+
+@keyframes pulse-shadow {
+    from {
+        box-shadow: 0 0 helpers.px2rem(10px) rgba(0, 0, 0, 0.5);
+    }
+
+    to {
+        box-shadow: 0 0 helpers.px2rem(30px) rgba(0, 0, 0, 1);
+    }
+}

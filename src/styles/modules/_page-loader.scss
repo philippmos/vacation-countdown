@@ -1,0 +1,27 @@
+@use "../utilities/helpers";
+@use "../animations/spin";
+
+.page-loader {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    transition: opacity 0.25s ease;
+
+    &--hidden {
+        opacity: 0;
+    }
+
+    &__icon {
+        background-image: url('../assets/circle-loader.svg');
+        height: helpers.px2rem(50px);
+        left: 50%;
+        margin: helpers.px2rem(-20px) 0 0 helpers.px2rem(-20px);
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: helpers.px2rem(50px);
+        animation: spin 1.5s linear infinite;
+    }
+}
